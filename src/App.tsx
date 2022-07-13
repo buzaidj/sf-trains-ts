@@ -54,7 +54,7 @@ export default function App() {
                 <p style={{fontSize: '24px', fontWeight: 'bold', margin: 0, padding: 0}}>BART Arrivals 🚊 🌃</p>
                 <HeaderRow stop={stop} lastUpdateTime={lastUpdateTime} fetchArrivals={fetchArrivals}></HeaderRow>
                 <Map center={mapCenter} zoom={mapZoom} stops={stops} fetchArrivals={fetchArrivals}></Map>
-                <SelectStop stops={stops} fetchArrivals={fetchArrivals} setMapCenter={setMapCenter} setMapZoom={setMapZoom}></SelectStop>
+                <SelectStop stops={stops} stop={stop} fetchArrivals={fetchArrivals} setMapCenter={setMapCenter} setMapZoom={setMapZoom}></SelectStop>
                 <Filter stop={stop} arrivals={arrivalList} filteredLines={filteredLines} filteredDirections={filteredDirections} setFilteredLines={setFilteredLines} setFilteredDirections={setFilteredDirections}></Filter>
                 <Arrivals arrivals={filterArrivals(arrivalList, filteredLines, filteredDirections)}></Arrivals>
             </header>

@@ -22,8 +22,9 @@ function onChangeFunction(fetchArrivals, setMapCenter, setMapZoom)
 }
 
 
-export function SelectStop({stops, fetchArrivals, setMapCenter, setMapZoom}) {
+export function SelectStop({stops, stop, fetchArrivals, setMapCenter, setMapZoom}) {
     return <Select
+        defaultValue={stop}
         id = 'StopSelector'
         options = {stops}
         onChange = {onChangeFunction(fetchArrivals, setMapCenter, setMapZoom)}
